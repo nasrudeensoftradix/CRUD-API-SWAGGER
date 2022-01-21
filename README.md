@@ -15,6 +15,12 @@ Example covers requests documentation and documenting responses with schemas and
 
 Execute `node index.js` to run the example:
 
+OR
+
+`Build with docker`
+docker-compose -f docker-compose.yml pull
+docker-compose -f docker-compose.yml up -d --build
+
 Swagger Page - Navigate to `http://localhost:4000/docs`
 
 
