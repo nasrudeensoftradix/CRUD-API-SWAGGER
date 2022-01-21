@@ -13,14 +13,15 @@ Example covers requests documentation and documenting responses with schemas and
 ![demo_detail](https://i.imgur.com/U60NFwS.png)
 ## How to use
 
-Execute `node index.js` to run the example:
+Execute `node index.js` to run the example as an app
 
 OR
 
-`Build with docker`
-docker-compose -f docker-compose.yml pull
-docker-compose -f docker-compose.yml up -d --build
+Run in docker container
 
+`docker-compose -f docker-compose.yml pull && docker-compose -f docker-compose.yml up -d --build`
+
+--- 
 Swagger Page - Navigate to `http://localhost:4000/docs`
 
 
