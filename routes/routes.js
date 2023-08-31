@@ -1,12 +1,12 @@
-import express from 'express'
+import express from "express";
 import {
   getHeroesHandler,
   addHeroHandler,
   deleteHeroHandler,
   editHeroHandler,
-} from '../controllers/hero.controller.js'
-
-const router = express.Router()
+} from "../controllers/heroController.js";
+import { getUser } from "../controllers/userControler.js";
+const router = express.Router();
 
 /**
  * @openapi
@@ -33,7 +33,7 @@ const router = express.Router()
  *         description: Bad request
  */
 
-router.get('/api/heroes', getHeroesHandler)
+router.get("/api/heroes", getHeroesHandler);
 
 /**
  * @openapi
@@ -66,7 +66,7 @@ router.get('/api/heroes', getHeroesHandler)
  *      404:
  *        description: Not Found
  */
-router.post('/api/hero', addHeroHandler)
+router.post("/api/hero", addHeroHandler);
 
 /**
  * @openapi
@@ -99,7 +99,7 @@ router.post('/api/hero', addHeroHandler)
  *      404:
  *        description: Not Found
  */
-router.put('/api/hero', editHeroHandler)
+router.put("/api/hero", editHeroHandler);
 
 /**
  * @openapi
@@ -121,6 +121,6 @@ router.put('/api/hero', editHeroHandler)
  *      404:
  *        description: Not Found
  */
-router.delete('/api/hero/:id', deleteHeroHandler)
-
-export default router
+router.delete("/api/hero/:id", deleteHeroHandler);
+router.get("/api/getUser", getUser);
+export default router;
